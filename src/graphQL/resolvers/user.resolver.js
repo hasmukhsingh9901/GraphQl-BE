@@ -17,6 +17,10 @@ const userResolvers = {
       const newUser = new User({ username, email, password });
       return await newUser.save();
     },
+    loginUser: async (_, { email, password }) => {
+        const user = await User.findOne({ email });;
+      return user;
+    },
   },
 };
 

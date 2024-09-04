@@ -17,6 +17,7 @@ const typeDefs = `#graphql
 
     type Mutation {
         createUser(username: String!, email: String!, password: String!): User
+        loginUser(email: String!, password: String!): User
     }
 
     input RegisterInput {
