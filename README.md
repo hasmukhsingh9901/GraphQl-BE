@@ -1,24 +1,33 @@
+# GraphQL Auth Backend
+
+This is a backend service built with Node.js, TypeScript, and GraphQL, designed to handle user authentication and authorization.
+
+## Project Structure
+
+The project is organized as follows:
+
+```bash
 graphql-auth-backend/
 ├── src/
 │   ├── config/
-│   │   └── db.ts
+│   │   └── db.ts              # Database configuration
 │   ├── middleware/
-│   │   ├── authMiddleware.ts
-│   │   └── roleMiddleware.ts
+│   │   ├── authMiddleware.ts  # Middleware for authentication
+│   │   └── roleMiddleware.ts  # Middleware for role-based access control
 │   ├── models/
-│   │   └── User.ts
+│   │   └── User.ts            # Mongoose schema and model for User
 │   ├── resolvers/
-│   │   ├── userResolvers.ts
-│   │   └── index.ts
+│   │   ├── userResolvers.ts   # GraphQL resolvers for user-related operations
+│   │   └── index.ts           # Entry point for all resolvers
 │   ├── schemas/
-│   │   └── userSchema.ts
+│   │   └── userSchema.ts      # GraphQL schema for user-related operations
 │   ├── services/
-│   │   ├── authService.ts
-│   │   └── userService.ts
+│   │   ├── authService.ts     # Service for handling authentication logic
+│   │   └── userService.ts     # Service for user-related operations
 │   ├── utils/
-│   │   ├── generateToken.ts
-│   │   └── hashPassword.ts
-│   ├── index.ts
-│   └── .env
-├── package.json
-└── tsconfig.json 
+│   │   ├── generateToken.ts   # Utility function to generate JWT tokens
+│   │   └── hashPassword.ts    # Utility function to hash passwords
+│   ├── index.ts               # Entry point for the application
+│   └── .env                   # Environment variables
+├── package.json                # Project dependencies and scripts
+└── tsconfig.json               # TypeScript configuration
